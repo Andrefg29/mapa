@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MAPA Cetral</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
+        body{
+            display: flex;
+            justify-content: center;
+            justify-items: center;
+            align-items: center;
+            align-content: center;
+            height: 100vh;
+            width: 100%;
+            margin: 0;
+            flex-direction: column;
+        }
+
+        .boneco{
+            position: absolute;
+            top: 450px;
+            left: 600px
+        }
+
+        .texto_rs{
+            position: absolute;
+            left: 10px;
+            width: 20%;
+            word-break: break-word;
+            background-color: blueviolet;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            text-align: justify;
+            padding: 1%;
+            border-radius: 10px;
+            display: none;
+        }
+
+        .texto_sc{
+            position: absolute;
+            left: 10px;
+            width: 20%;
+            word-break: break-word;
+            background-color: greenyellow;
+            font-family: 'Poppins', sans-serif;
+            font-size: 12px;
+            font-weight: 400;
+            text-align: justify;
+            padding: 1%;
+            border-radius: 10px;
+            display: none
+        }
+    </style>
+</head>
+<body>
+
+    <map name="meu_mapa">
+        <area shape="circle" onmouseleave="Esconder();" onmouseover="MostrarTexto('RS');" coords="260, 440, 20" href="https://goo.gl/maps/v1WefwdKwoGUQEdV8" target="_blank">
+        <area shape="circle" onmouseleave="Esconder();" onmouseover="MostrarTexto('SC');" coords="297, 413, 20" href="https://goo.gl/maps/9ccFsm5wz3Mmhxiz9" target="_blank">
+        <area shape="circle" coords="280, 376, 20" href="https://goo.gl/maps/9QcBwdWiFBeevu656" target="_blank">
+        <area shape="circle" coords="314, 351, 20" href="https://goo.gl/maps/8KvZbQtyaf1hNzXv9" target="_blank">
+        <area shape="circle" coords="239, 327, 20" href="https://goo.gl/maps/uwQe1a7L2gLxFMgh9" target="_blank">
+        <area shape="circle" coords="384, 352, 20" href="https://goo.gl/maps/rSZijYs57itTEyrHA" target="_blank">
+        <area shape="circle" coords="364, 311, 20" href="https://goo.gl/maps/AqgXXLNudrKFtpHB8" target="_blank">
+        <area shape="circle" coords="408, 321, 20" href="https://goo.gl/maps/uzHMHy7nVh2pmoWG6" target="_blank">
+        <area shape="circle" coords="298, 275, 20" href="https://goo.gl/maps/iC3AeJX8raeVfLiF7" target="_blank">
+        <area shape="circle" coords="325, 268, 20" href="https://goo.gl/maps/XUpz3TjjQ56QTXnz6" target="_blank">
+        <area shape="circle" coords="230, 231, 20" href="https://goo.gl/maps/2wigcvDW3XwDYd9j9" target="_blank">
+        <area shape="circle" coords="396, 226, 20" href="https://goo.gl/maps/rXzP6Y7b89Jf6nxTA" target="_blank">
+        <area shape="circle" coords="320, 200, 20" href="https://goo.gl/maps/wm5Tos8A3FPDchJaA" target="_blank">
+        <area shape="circle" coords="453, 209, 20" href="https://goo.gl/maps/gWGkQK3xsX8P9HaB6" target="_blank">
+        <area shape="circle" coords="414, 197, 20" href="https://goo.gl/maps/zequwihZMHAzURHZA" target="_blank">
+        <area shape="circle" coords="447, 179, 20" href="https://goo.gl/maps/qsfNJTrML9BJ7Se76" target="_blank">
+        <area shape="circle" coords="467, 169, 20" href="https://goo.gl/maps/kFmBuk5vgjs6oitd8" target="_blank">
+        <area shape="circle" coords="467, 147, 20" href="https://goo.gl/maps/fQtD1V8AwgeYMi7A9" target="_blank">
+        <area shape="circle" coords="430, 137, 20" href="https://goo.gl/maps/sqY4exabgU5Djkyk6" target="_blank">
+        <area shape="circle" coords="388, 170, 20" href="https://goo.gl/maps/8tMJr7m3bCXWXhHVA" target="_blank">
+        <area shape="circle" coords="361, 136, 20" href="https://goo.gl/maps/k55k8Qzg8UwaWXrS7" target="_blank">
+        <area shape="circle" coords="264, 133, 20" href="https://goo.gl/maps/i76dDUeQm8XdKf1d7" target="_blank">
+        <area shape="circle" coords="278, 52, 20" href="https://goo.gl/maps/TyEZZkaREZB2m6w68" target="_blank">
+        <area shape="circle" coords="159, 46, 20" href="https://goo.gl/maps/L1WwFayqRvBVLAMYA" target="_blank">
+        <area shape="circle" coords="118, 120, 20" href="https://goo.gl/maps/W5AZDYSgGBn1uB4Z9" target="_blank">
+        <area shape="circle" coords="43,186, 20" href="https://goo.gl/maps/sUQxkVLiUMP7WehG6" target="_blank">
+        <area shape="circle" coords="138, 210, 20" href="https://goo.gl/maps/4iGpUihX7EnWGuwS8" target="_blank">
+    </map>
+
+    <img class="boneco" src="boneco.gif" width="70px" >
+    <img class="mapa" src="mapa_brasil.jpg" id="BRASIL" usemap="#meu_mapa">
+    <div class="texto_rs" id="texto_rs">Rio Grande do Sul é o estado mais a sul do Brasil e faz fronteira com a Argentina e o Uruguai. A nordeste, a montanhosa Serra Gaúcha alberga a região vinícola do Vale dos Vinhedos e inclui cidades turísticas de estilo alemão como Gramado e Canela, famosas pelas paisagens naturais pitorescas. Porto Alegre, a capital, é um grande porto com estruturas clássicas como o Mercado Público e a Catedral Metropolitana, no centro histórico.</div>
+    <div class="texto_sc" id="texto_sc">Santa Catarina é um estado na região sul do Brasil. Com uma longa costa com o Atlântico e muitas ilhas, ela é conhecida por suas praias e montanhas. Florianópolis, a capital, tem um mercado público tradicional com bares, restaurantes e barracas de comida, além de um museu histórico instalado em um palácio do governo colonial do século 19. Florianópolis está basicamente na ilha de Santa Catarina, que conta com resorts de praia na extremidade norte.</div>
+
+    <script>
+        function Esconder(){
+            texto_rs.style.display = "none";
+            texto_sc.style.display = "none";
+        }
+
+        function MostrarTexto(estado){
+            if(estado == "RS"){
+                texto_rs.style.display = "block";
+            }
+            if(estado == "SC"){
+                texto_sc.style.display = "block";
+            }
+        }
+    </script>
+
+</body>
+</html>
